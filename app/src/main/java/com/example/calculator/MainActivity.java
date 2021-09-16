@@ -184,25 +184,26 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if (add == true) {
-                    results.setText(firstValue + secondValue + "    ");
+                    results.setText(firstValue + secondValue + "");
                     add = false;
                 }
 
                 if (subtract == true) {
-                    results.setText(firstValue - secondValue + "    ");
+                    results.setText(firstValue - secondValue + "");
                     subtract = false;
                 }
 
 
                 if (multiply == true) {
-                    results.setText(firstValue * secondValue + "    ");
+                    results.setText(firstValue * secondValue + "");
                     multiply = false;
                 }
 
                 if (divide == true) {
-                    results.setText(firstValue / secondValue + "    ");
+                    results.setText(firstValue / secondValue + "");
                     divide = false;
                 }
+
 
             }
         });
