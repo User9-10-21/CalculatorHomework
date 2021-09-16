@@ -66,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
         bDelete = findViewById(R.id.button_delete);
 
 
-
-
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,5 +137,88 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        bAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firstValue = Integer.parseInt(results.getText() + "");
+                results.setText(null);
+                add = true;
+            }
+        });
+
+
+        bSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firstValue = Integer.parseInt(results.getText() + "");
+                results.setText(null);
+                subtract = true;
+            }
+        });
+
+        bMult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firstValue = Integer.parseInt(results.getText() + "");
+                results.setText(null);
+                multiply = true;
+            }
+        });
+
+
+        bDivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firstValue = Integer.parseInt(results.getText() + "");
+                results.setText(null);
+                divide = true;
+            }
+        });
+
+
+        bEquals.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                secondValue = Integer.parseInt(results.getText() + "");
+
+
+                if (add == true) {
+                    results.setText(firstValue + secondValue + "    ");
+                    add = false;
+                }
+
+                if (subtract == true) {
+                    results.setText(firstValue - secondValue + "    ");
+                    subtract = false;
+                }
+
+
+                if (multiply == true) {
+                    results.setText(firstValue * secondValue + "    ");
+                    multiply = false;
+                }
+
+                if (divide == true) {
+                    results.setText(firstValue / secondValue + "    ");
+                    divide = false;
+                }
+
+            }
+        });
+
+
+        bDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                results.setText("");
+                results.setHint("Enter text here.");
+                firstValue = 0;
+                secondValue = 0;
+            }
+        });
+
+
     }
+
 }
